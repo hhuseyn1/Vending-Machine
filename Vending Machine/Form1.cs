@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+
 namespace Vending_Machine
 {
     public partial class Form1 : Form
@@ -5,6 +7,7 @@ namespace Vending_Machine
         public Form1()
         {
             InitializeComponent();
+
         }
         double CashInPrice = default;
         void CalcTotPrice()
@@ -189,35 +192,50 @@ namespace Vending_Machine
         {
             CashInPrice += 0.1;
             Cashin_txtbox.Text = Math.Round(CashInPrice, 2).ToString();
+            Remainder();
+
         }
 
         private void C20_btn_Click(object sender, EventArgs e)
         {
             CashInPrice += 0.2;
             Cashin_txtbox.Text = Math.Round(CashInPrice,2).ToString();
+            Remainder();
+
         }
         private void C50_btn_Click(object sender, EventArgs e)
         {
             CashInPrice += 0.5;
             Cashin_txtbox.Text = Math.Round(CashInPrice, 2).ToString();
+            Remainder();
+
         }
 
         private void D1_btn_Click(object sender, EventArgs e)
         {
             CashInPrice += 1.0;
             Cashin_txtbox.Text = Math.Round(CashInPrice, 2).ToString();
+            Remainder();
+
         }
 
         private void D5_btn_Click(object sender, EventArgs e)
         {
             CashInPrice += 5.0;
             Cashin_txtbox.Text = Math.Round(CashInPrice, 2).ToString();
+            Remainder();
+
         }
 
         private void D10_btn_Click(object sender, EventArgs e)
         {
             CashInPrice += 10.0;
             Cashin_txtbox.Text = Math.Round(CashInPrice, 2).ToString();
+            Remainder();
+        }
+        public void Remainder(){
+            if (CashInPrice > double.Parse(Totalprice_txtbox.Text))
+                Remainder_txtbox.Text =     Math.Round((double.Parse(Cashin_txtbox.Text) - double.Parse(Totalprice_txtbox.Text)),2).ToString();
         }
     }
 }
