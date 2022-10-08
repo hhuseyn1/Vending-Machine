@@ -188,36 +188,36 @@ namespace Vending_Machine
         private void C10_btn_Click(object sender, EventArgs e)
         {
             CashInPrice += 0.1;
-            Cashin_txtbox.Text=CashInPrice.ToString();
+            Cashin_txtbox.Text = Math.Round(CashInPrice, 2).ToString();
         }
 
         private void C20_btn_Click(object sender, EventArgs e)
         {
             CashInPrice += 0.2;
-            Cashin_txtbox.Text = CashInPrice.ToString();
+            Cashin_txtbox.Text = Math.Round(CashInPrice,2).ToString();
         }
         private void C50_btn_Click(object sender, EventArgs e)
         {
             CashInPrice += 0.5;
-            Cashin_txtbox.Text = CashInPrice.ToString();
+            Cashin_txtbox.Text = Math.Round(CashInPrice, 2).ToString();
         }
 
         private void D1_btn_Click(object sender, EventArgs e)
         {
             CashInPrice += 1.0;
-            Cashin_txtbox.Text = CashInPrice.ToString();
+            Cashin_txtbox.Text = Math.Round(CashInPrice, 2).ToString();
         }
 
         private void D5_btn_Click(object sender, EventArgs e)
         {
             CashInPrice += 5.0;
-            Cashin_txtbox.Text = CashInPrice.ToString();
+            Cashin_txtbox.Text = Math.Round(CashInPrice, 2).ToString();
         }
 
         private void D10_btn_Click(object sender, EventArgs e)
         {
             CashInPrice += 10.0;
-            Cashin_txtbox.Text = CashInPrice.ToString();
+            Cashin_txtbox.Text = Math.Round(CashInPrice, 2).ToString();
         }
     }
 }
